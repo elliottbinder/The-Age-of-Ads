@@ -2,7 +2,7 @@
 
 If you think it's a mistake you made it onto this list, make an issue and I'll see if I can remove you.
 
-Here's over 2600 accounts that I block on Twitter.  Mostly promoted, meme-posting, or "parody" accounts.
+Here's over 2700 accounts that I block on Twitter.  Mostly promoted, meme-posting, or "parody" accounts.
 
 To block these accounts:
 
