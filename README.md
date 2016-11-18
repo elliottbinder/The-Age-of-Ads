@@ -1,6 +1,6 @@
 # some_twitter_blocks
 
-Here are over 3700 accounts that I block on Twitter.  Mostly promoted, meme-posting, or "parody" accounts.
+Here are over 3900 accounts that I block on Twitter.  Mostly promoted, meme-posting, or "parody" accounts.
 
 To block these accounts:
 
