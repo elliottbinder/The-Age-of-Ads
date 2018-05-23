@@ -12,3 +12,32 @@ To block these accounts:
 If you think it's a mistake you made it onto this list, make an issue and I'll see if I can remove you.
 
 If you wanna contribute, make a pull request, append your blocks, and push!
+
+
+### To automate blocks for promoted accounts
+
+Throw this script in Greasemonkey.  Open up a few twitter windows and watch your blocklist grow!  If you have any suggestions for how to block the accounts on loading of more tweets instead of using the scroll action, I'm all ears!
+
+```
+// ==UserScript==
+// @name     Block promoted tweets
+// @version  1
+// @include  https://TWITTER.COM/*
+// @require http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+// ==/UserScript==
+
+// select and block accounts that have promoted tweets.
+$(document).on("scroll", function() {
+	$(".Icon--promoted").parent().parent().parent().children("div.stream-item-header").children("div.ProfileTweet-action").children("div.dropdown").children("div.dropdown-menu").children("ul").children("li.block-link").each(
+    	function (e) {
+        this.click();
+        $("button.block-button")[0].click();
+      })
+});
+
+// scroll to bottom of page to load in some more tweets (some promoted maybe)
+window.setInterval(function() {window.scrollByPages(100)}, 2000);
+
+// refresh the page every 20 seconds so 
+window.setInterval(function() {location.reload();}, 20000);
+```
